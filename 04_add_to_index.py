@@ -15,6 +15,9 @@ def old_keyword(index, keyword, url):
     for i in range(len(index)):
         if index[i][0] == keyword:
             location = i
+    for entry in index[location]:
+        if entry == url:
+            return
     index[location][1].append(url)
     return
 

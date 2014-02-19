@@ -1,0 +1,9 @@
+def pattern_gen(number):
+    result = []
+    while number != 0:
+        for e in range(7, -1, -1):
+            if number / 2 ** e:
+                result.append(2 ** e)
+                number -= 2 ** e
+    print result
+    print number
